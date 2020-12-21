@@ -1,14 +1,13 @@
 package days
 
-import java.io.File
+import utils.ReadFile.readFileAsLinesUsingReadLines
 
 class Day3 {
-    private val day3 = "src/main/resources/day3.txt"
+    private val list = readFileAsLinesUsingReadLines("src/main/resources/day3.txt").map{
+        line -> line.toCharArray()
+    }
 
-    fun count(): Int {
-        val list = readFileAsLinesUsingReadLines(day3).map{
-            line -> line.toCharArray()
-        }
+    fun countTrees(): Int {
         var count = 0
         var x = 3
         list.drop(1).forEach{row ->
@@ -18,6 +17,13 @@ class Day3 {
         return count
     }
 
-    fun readFileAsLinesUsingReadLines(fileName: String): List<String>
-            = File(fileName).readLines()
+    fun countTreesExtended(): Int {
+        var count = 0
+        var x = 3
+        list.drop(1).forEach{row ->
+            if(row[x] == '#') count++
+            x = (x+3) % 31
+        }
+        return count
+    }
 }

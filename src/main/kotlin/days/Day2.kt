@@ -1,12 +1,11 @@
 package days
 
-import java.io.File
+import utils.ReadFile
 
 class Day2 {
-    private val day2 = "src/main/resources/day2.txt"
+    private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day2.txt")
 
     fun findCorrectPasswords(): Int {
-        val list = readFileAsLinesUsingReadLines(day2)
         var count = 0
         list.forEach { line ->
             val parts = line.split(" ")
@@ -18,7 +17,6 @@ class Day2 {
     }
 
     fun findCorrectPasswordsExtended(): Int {
-        val list = readFileAsLinesUsingReadLines(day2)
         var count = 0
         list.forEach { line ->
             val parts = line.split(" ")
@@ -37,7 +35,4 @@ class Day2 {
     fun countOccurrences(s: String, ch: Char): Int {
         return s.filter { it == ch }.count()
     }
-
-    fun readFileAsLinesUsingReadLines(fileName: String): List<String>
-            = File(fileName).readLines()
 }

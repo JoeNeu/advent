@@ -10,5 +10,6 @@ fun main(args: Array<String>) {
 //    println("Day1: " + day1.findThree())
 //    println("Day2: " + day2.findCorrectPasswords())
 //    println("Day2: " + day2.findCorrectPasswordsExtended())
-    println("Day3: " + day3.count())
+    println("Day3: " + day3.countTrees())
+    println("Day3: " + day3.countTreesExtended())
 }

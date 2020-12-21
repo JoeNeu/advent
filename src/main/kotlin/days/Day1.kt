@@ -1,12 +1,12 @@
 package days
 
+import utils.ReadFile
 import java.io.File
 
 class Day1{
-    private val day1 = "src/main/resources/day1.txt"
+    private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day1.txt")
 
     fun findTwo(): Int {
-        val list = readFileAsLinesUsingReadLines(day1)
         list.forEach { first ->
             list.forEach() {second ->
                 if(second.toInt() + first.toInt() == 2020) return (second.toInt() * first.toInt())
@@ -16,7 +16,6 @@ class Day1{
     }
 
     fun findThree(): Int {
-        val list = readFileAsLinesUsingReadLines(day1)
         list.forEach { first ->
             list.forEach() {second ->
                 list.forEach() {third ->
@@ -26,7 +25,4 @@ class Day1{
         }
         return 0
     }
-
-    fun readFileAsLinesUsingReadLines(fileName: String): List<String>
-            = File(fileName).readLines()
 }
