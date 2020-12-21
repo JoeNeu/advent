@@ -16,7 +16,7 @@ class Day3 {
         return search(1) * search(3) * search(5) * search(7) * search(1, true)
     }
 
-    fun search(shift: Int, twoSteps: Boolean = false): BigInteger {
+    private fun search(shift: Int, twoSteps: Boolean = false): BigInteger {
         var x = shift
         var jumpRow = twoSteps
         var count = BigInteger.ZERO
