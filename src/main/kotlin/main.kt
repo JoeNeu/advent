@@ -1,3 +1,7 @@
+import days.DayOne
+
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val dayOne = DayOne()
+    println("Day1: " + dayOne.findTwo())
+    println("Day1: " + dayOne.findThree())
 }
