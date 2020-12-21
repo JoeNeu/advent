@@ -2,7 +2,7 @@ package days
 
 import java.io.File
 
-class DayOne{
+class Day1{
     private val day1 = "src/main/resources/day1.txt"
 
     fun findTwo(): Int {

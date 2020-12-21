@@ -2,7 +2,7 @@ package days
 
 import java.io.File
 
-class DayTwo {
+class Day2 {
     private val day2 = "src/main/resources/day2.txt"
 
     fun findCorrectPasswords(): Int {
