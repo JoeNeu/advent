@@ -6,7 +6,7 @@ class DayOne{
     private val day1 = "src/main/resources/day1.txt"
 
     fun findTwo(): Int {
-        val list = readFileAsLinesUsingBufferedReader(day1)
+        val list = readFileAsLinesUsingReadLines(day1)
         list.forEach { first ->
             list.forEach() {second ->
                 if(second.toInt() + first.toInt() == 2020) return (second.toInt() * first.toInt())
@@ -16,7 +16,7 @@ class DayOne{
     }
 
     fun findThree(): Int {
-        val list = readFileAsLinesUsingBufferedReader(day1)
+        val list = readFileAsLinesUsingReadLines(day1)
         list.forEach { first ->
             list.forEach() {second ->
                 list.forEach() {third ->
@@ -27,6 +27,6 @@ class DayOne{
         return 0
     }
 
-    fun readFileAsLinesUsingBufferedReader(fileName: String): List<String>
+    fun readFileAsLinesUsingReadLines(fileName: String): List<String>
             = File(fileName).readLines()
 }
