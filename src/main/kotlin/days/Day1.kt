@@ -3,7 +3,7 @@ package days
 import utils.FileReader
 
 class Day1 {
-    private val list = FileReader.asLines("src/main/resources/day1.txt")
+    private val list = FileReader.asLines("src/main/resources/day1.txt").sorted()
 
     fun partOne(): Int {
         list.forEach { first ->

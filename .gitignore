@@ -26,5 +26,4 @@ hs_err_pid*
 .idea
 
 *.iml
-/target/classes/META-INF/consoleApp.kotlin_module
-/target/classes/day1.txt
+target
