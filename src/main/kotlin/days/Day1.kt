@@ -1,7 +1,6 @@
 package days
 
 import utils.ReadFile
-import java.io.File
 
 class Day1{
     private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day1.txt")

@@ -11,6 +11,7 @@ class Day5 {
 
     fun searchHighestId(): Int {
         var highestId = 0
+        val idList: MutableList<Int> = mutableListOf()
         list.forEach{ ticket ->
             var row = rows
             var seat = seats
@@ -31,10 +32,18 @@ class Day5 {
                 }
             }
             val current = row[0]* 8 + seat[0]
+            idList.add(current)
             if(highestId < current) {
                 highestId = current
             }
         }
-        return highestId
+        println("Day5:1 ${highestId}")
+        val sortedList = idList.toIntArray().sorted()
+        sortedList.forEach{
+            if(!sortedList.contains(it + 1)) {
+                return it+1
+            }
+        }
+        return 0
     }
 }
