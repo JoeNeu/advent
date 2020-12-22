@@ -1,6 +1,6 @@
 package utils
 
-data class Person (
+data class Person(
         var byr: Boolean,
         var iyr: Boolean,
         var eyr: Boolean,

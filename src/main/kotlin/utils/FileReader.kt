@@ -7,5 +7,5 @@ object FileReader {
             = File(fileName).readLines()
 
     fun asText(fileName: String): String
-            = File(fileName).readText(Charsets.UTF_8)
+            = File(fileName).bufferedReader().use { it.readText() }
 }
