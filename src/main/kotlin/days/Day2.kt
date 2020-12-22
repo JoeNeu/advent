@@ -1,9 +1,9 @@
 package days
 
-import utils.ReadFile
+import utils.FileReader
 
 class Day2 {
-    private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day2.txt")
+    private val list = FileReader.asLines("src/main/resources/day2.txt")
 
     fun findCorrectPasswords(): Int {
         var count = 0

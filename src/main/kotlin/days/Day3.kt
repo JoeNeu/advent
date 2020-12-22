@@ -1,10 +1,10 @@
 package days
 
-import utils.ReadFile.readFileAsLinesUsingReadLines
+import utils.FileReader.asLines
 import java.math.BigInteger
 
 class Day3 {
-    private val list = readFileAsLinesUsingReadLines("src/main/resources/day3.txt").map{
+    private val list = asLines("src/main/resources/day3.txt").map{
         line -> line.toCharArray()
     }
 

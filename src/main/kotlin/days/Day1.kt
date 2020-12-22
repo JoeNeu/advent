@@ -1,9 +1,9 @@
 package days
 
-import utils.ReadFile
+import utils.FileReader
 
 class Day1{
-    private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day1.txt")
+    private val list = FileReader.asLines("src/main/resources/day1.txt")
 
     fun findTwo(): Int {
         list.forEach { first ->

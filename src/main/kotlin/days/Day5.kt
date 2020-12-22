@@ -1,9 +1,9 @@
 package days
 
-import utils.ReadFile
+import utils.FileReader
 
 class Day5 {
-    private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day5.txt").map {
+    private val list = FileReader.asLines("src/main/resources/day5.txt").map {
         it.toCharArray()
     }
     private var rows = (0..127).toList().toIntArray()

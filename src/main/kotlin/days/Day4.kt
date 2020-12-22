@@ -1,10 +1,10 @@
 package days
 
 import utils.Person
-import utils.ReadFile
+import utils.FileReader
 
 class Day4 {
-    private val list = ReadFile.readFileAsLinesUsingReadLines("src/main/resources/day4.txt")
+    private val list = FileReader.asLines("src/main/resources/day4.txt")
 
     private val eyeColor = listOf(
             "amb", "blu", "brn", "gry", "grn", "hzl", "oth"
